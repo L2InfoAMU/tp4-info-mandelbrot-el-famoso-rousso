@@ -154,7 +154,7 @@ public class Complex {
     //TODO : test du throw pas ouf
     Complex reciprocal() {
        if (this.equals(ZERO)){
-         //   throw new ArithmeticException("divide by zero");
+            throw new ArithmeticException("divide by zero");
         }
         double m = squaredModulus();
         return new Complex(real / m, imaginary / -m);
@@ -211,8 +211,8 @@ public class Complex {
         if (o == null || getClass() != o.getClass())
             return false;
         Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 0 ||
-                Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
+        return complex.real == real &&
+                complex.imaginary== imaginary;
     }
 
     @Override
