@@ -159,5 +159,12 @@ public class ComplexTest {
         assertEquals(8, aModuler.squaredModulus());
     }
 
+    @Test
+    void modulus(){
+        Complex aModulus = new Complex(4,4);
+
+        assertEquals(Math.sqrt(32),aModulus.modulus());
+    }
+
 
 }
