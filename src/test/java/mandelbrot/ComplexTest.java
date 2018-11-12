@@ -153,6 +153,11 @@ public class ComplexTest {
     assertEquals(new Complex(3,4), facteur.multiply(facteur));
     assertEquals(new Complex(4,7), facteur.multiply(new Complex(3,2)));
     }
+    @Test
+    void squaredModulus(){
+        Complex aModuler = new Complex(2,2);
+        assertEquals(8, aModuler.squaredModulus());
+    }
 
 
 }
