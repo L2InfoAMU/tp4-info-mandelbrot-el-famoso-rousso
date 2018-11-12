@@ -141,10 +141,18 @@ public class ComplexTest {
         assertEquals(new Complex(-1.0,0.0), Complex.real(-1.0));
     }
     @Test
-    void add(){
+    void testAdd(){
         Complex added = new Complex(1,1);
         assertEquals(new Complex(2,2), added.add(added));
         Complex addedd = new Complex(-1,1);
         assertEquals(new Complex(-2,2), addedd.add(addedd));
     }
+    @Test
+    void testMultiply(){
+    Complex facteur = new Complex(2,1);
+    assertEquals(new Complex(3,4), facteur.multiply(facteur));
+    assertEquals(new Complex(4,7), facteur.multiply(new Complex(3,2)));
+    }
+
+
 }
