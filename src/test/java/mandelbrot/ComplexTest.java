@@ -178,5 +178,13 @@ public class ComplexTest {
         double lambda = 2;
         assertEquals(new Complex(8,8),scaling.scale(lambda));
     }
+    @Test
+    void  testEquals(){
+        Object o= new Complex(2,2);
+        Object a=new Complex(2,2);
+        Object b=new Complex(18,2);
+        assertEquals(true,o.equals(a));
+        assertNotEquals(true, b.equals(o));
+    }
 
 }
