@@ -169,8 +169,14 @@ public class ComplexTest {
     void pow(){
 
         Complex toPow = new Complex(2,2);
-        int poww = 2;
-        assertEquals(new Complex(0,8),toPow.pow(poww));
+        int power = 2;
+        assertEquals(new Complex(0,8),toPow.pow(power));
+    }
+    @Test
+    void scale(){
+        Complex scaling = new Complex(4,4);
+        double lambda = 2;
+        assertEquals(new Complex(8,8),scaling.scale(lambda));
     }
 
 }
