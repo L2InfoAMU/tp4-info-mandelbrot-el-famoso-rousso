@@ -134,10 +134,17 @@ public class ComplexTest {
         assertEquals(c1.hashCode(), c2.hashCode());
     }
     @Test
-    // TODO : a finir
     void testReal(){
 
 
-        assertEquals(real,0);
+        assertEquals(real,-12);
+        assertEquals(new Complex(-1.0,0.0), Complex.real(-1.0));
+    }
+    @Test
+    void add(){
+        Complex added = new Complex(1,1);
+        assertEquals(new Complex(2,2), added.add(added));
+        Complex addedd = new Complex(-1,1);
+        assertEquals(new Complex(-2,2), addedd.add(addedd));
     }
 }
