@@ -165,6 +165,12 @@ public class ComplexTest {
 
         assertEquals(Math.sqrt(32),aModulus.modulus());
     }
+    @Test
+    void pow(){
 
+        Complex toPow = new Complex(2,2);
+        int poww = 2;
+        assertEquals(new Complex(0,8),toPow.pow(poww));
+    }
 
 }
