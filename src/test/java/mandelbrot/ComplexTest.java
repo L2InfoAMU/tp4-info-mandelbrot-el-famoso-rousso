@@ -156,27 +156,37 @@ public class ComplexTest {
     @Test
     void squaredModulus(){
         Complex aModuler = new Complex(2,2);
+        Complex aModulerTest2 = new Complex(5,-2);
         assertEquals(8, aModuler.squaredModulus());
+        assertEquals(29, aModulerTest2.squaredModulus());
     }
 
     @Test
     void modulus(){
         Complex aModulus = new Complex(4,4);
+        Complex aModulusTest2 = new Complex(-5,-5);
 
         assertEquals(Math.sqrt(32),aModulus.modulus());
+        assertEquals(Math.sqrt(50),aModulusTest2.modulus());
     }
     @Test
     void pow(){
 
         Complex toPow = new Complex(2,2);
+        Complex toPowTest2 = new Complex(-2,2);
+
         int power = 2;
         assertEquals(new Complex(0,8),toPow.pow(power));
+        assertEquals(new Complex(0,-8),toPowTest2.pow(power));
     }
     @Test
     void scale(){
         Complex scaling = new Complex(4,4);
+        Complex scalingTest2 = new Complex(8,-3);
         double lambda = 2;
+        double delta = 4;
         assertEquals(new Complex(8,8),scaling.scale(lambda));
+        assertEquals(new Complex(32,-12),scalingTest2.scale(delta));
     }
     @Test
     void  testEquals(){
